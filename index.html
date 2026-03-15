@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dwij Offensive Security | Penetration Testing & Security Assessments</title>
+  <meta name="description" content="Dwij Offensive Security provides professional penetration testing and security assessment services. We find your vulnerabilities before attackers do." />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="#home" class="logo">
+        <div class="logo-icon">
+          <svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M14 2L4 7v8c0 5.25 4.267 10.155 10 11.333C19.733 25.155 24 20.25 24 15V7L14 2Z" fill="#1d4ed8" opacity="0.15"/>
+            <path d="M14 2L4 7v8c0 5.25 4.267 10.155 10 11.333C19.733 25.155 24 20.25 24 15V7L14 2Z" stroke="#1d4ed8" stroke-width="1.8" stroke-linejoin="round"/>
+            <path d="M10 14l3 3 5-5" stroke="#1d4ed8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <span class="logo-name">Dwij<span class="logo-accent">Sec</span></span>
+      </a>
+
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="#about"       class="nav-link">About</a></li>
+        <li><a href="#services"    class="nav-link">Services</a></li>
+        <li><a href="#process"     class="nav-link">Process</a></li>
+        <li><a href="#whyus"       class="nav-link">Why Us</a></li>
+        <li><a href="#deliverables" class="nav-link">Deliverables</a></li>
+        <li><a href="#contact"     class="nav-cta-link">Get a Free Consultation</a></li>
+      </ul>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ══════════════════════════════════════
+       HERO
+  ══════════════════════════════════════ -->
+  <section class="hero" id="home">
+    <div class="hero-bg-shape"></div>
+    <div class="container">
+      <div class="hero-grid">
+        <div class="hero-left">
+
+          <!-- Loss-aversion opener — psychological hook -->
+          <div class="hero-alert">
+            <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M8.485 2.495c.673-1.167 2.357-1.167 3.03 0l6.28 10.875c.673 1.167-.17 2.625-1.516 2.625H3.72c-1.345 0-2.189-1.458-1.515-2.625L8.485 2.495zM10 5a.75.75 0 01.75.75v3.5a.75.75 0 01-1.5 0v-3.5A.75.75 0 0110 5zm0 9a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"/></svg>
+            <span>The average breach goes undetected for <strong>194 days</strong>. Is your system already compromised?</span>
+          </div>
+
+          <h1 class="hero-h1">
+            Find Your Security Gaps <span class="highlight">Before Attackers Do</span>
+          </h1>
+
+          <p class="hero-sub">
+            Dwij Offensive Security performs professional penetration testing and security assessments that give you a clear, honest picture of your real-world security posture — with a detailed roadmap to fix every issue found.
+          </p>
+
+          <!-- Trust micro-signals -->
+          <div class="hero-trust">
+            <div class="trust-item">
+              <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 2L3 5.5v5C3 14.5 6.1 18.2 10 19c3.9-.8 7-4.5 7-8.5v-5L10 2z"/><path d="M7 10l2 2 4-4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <span>Manual Testing — No Scanner-Only Reports</span>
+            </div>
+            <div class="trust-item">
+              <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4" stroke-linecap="round" stroke-linejoin="round"/><path d="M17 8A9 9 0 11.998 10.5" stroke-linecap="round"/></svg>
+              <span>100% Confidential & NDA Protected</span>
+            </div>
+            <div class="trust-item">
+              <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2"><circle cx="10" cy="10" r="8"/><path d="M10 6v4l2 2" stroke-linecap="round"/></svg>
+              <span>Fast Response — Within 24 Hours</span>
+            </div>
+          </div>
+
+          <div class="hero-ctas">
+            <a href="#contact" class="btn-primary">Request a Free Consultation</a>
+            <a href="#services" class="btn-outline">See Our Services</a>
+          </div>
+
+        </div>
+
+        <div class="hero-right">
+          <div class="risk-card">
+            <div class="risk-card-head">
+              <div class="rc-dot red"></div>
+              <div class="rc-dot yellow"></div>
+              <div class="rc-dot green"></div>
+              <span class="rc-label">Security Risk Overview</span>
+            </div>
+            <div class="risk-card-body">
+              <div class="risk-stat">
+                <span class="rs-val red-text">$4.88M</span>
+                <span class="rs-desc">Average cost of a data breach in 2024 <span class="rs-src">(IBM Report)</span></span>
+              </div>
+              <div class="risk-divider"></div>
+              <div class="risk-stat">
+                <span class="rs-val orange-text">83%</span>
+                <span class="rs-desc">of organizations have experienced more than one data breach <span class="rs-src">(Ponemon Institute)</span></span>
+              </div>
+              <div class="risk-divider"></div>
+              <div class="risk-stat">
+                <span class="rs-val blue-text">72%</span>
+                <span class="rs-desc">of security professionals say penetration testing prevented a breach at their organization <span class="rs-src">(Fortra 2024)</span></span>
+              </div>
+              <div class="risk-divider"></div>
+              <a href="#contact" class="risk-cta">
+                Get Your Security Assessment
+                <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 10h12M10 4l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       PROBLEM SECTION — Pain Agitation
+  ══════════════════════════════════════ -->
+  <section class="problem" id="problem">
+    <div class="container">
+      <div class="problem-inner">
+        <div class="section-eyebrow">The Reality</div>
+        <h2 class="section-h2">Most Organizations Don't Know <span class="highlight">What They're Missing</span></h2>
+        <p class="section-sub">Attackers are patient, thorough, and constantly probing. A single overlooked vulnerability can be the entry point that costs everything. The question isn't <em>if</em> you'll be targeted — it's <em>when</em>, and <em>whether you'll be ready</em>.</p>
+
+        <div class="pain-grid">
+          <div class="pain-card">
+            <div class="pain-icon red-bg">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+            </div>
+            <h4>You shipped new features — did your security keep up?</h4>
+            <p>Every new endpoint, API, or integration is a potential attack surface. Development moves fast; vulnerabilities accumulate silently.</p>
+          </div>
+          <div class="pain-card">
+            <div class="pain-icon orange-bg">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+            </div>
+            <h4>Automated scanners only find what they're programmed to look for</h4>
+            <p>Real attackers exploit business logic, chained vulnerabilities, and misconfigurations that no automated tool can detect without human expertise.</p>
+          </div>
+          <div class="pain-card">
+            <div class="pain-icon yellow-bg">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+            </div>
+            <h4>Compliance ≠ Security</h4>
+            <p>Passing an audit means you met a checklist — not that you're actually secure. Attackers don't follow compliance frameworks.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       ABOUT
+  ══════════════════════════════════════ -->
+  <section class="about section-pad" id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-text-col">
+          <div class="section-eyebrow">About Dwij Offensive Security</div>
+          <h2 class="section-h2">Security Professionals Who <span class="highlight">Think Like Attackers</span></h2>
+          <p class="body-text">We are a focused offensive security firm. Our work is straightforward: we simulate real-world attacks on your systems, find the vulnerabilities, and give you everything you need to fix them — clearly documented, prioritized by risk, and explained in plain language.</p>
+          <p class="body-text">We don't sell fear. We provide facts. Every engagement is a collaborative process — we work closely with your team so findings are understood and remediation is practical, not just a list of theoretical risks.</p>
+          <p class="body-text">Our approach is manual-first. We don't hand you an automated scanner report dressed up as a pentest. We go deep, think creatively, and find what others miss.</p>
+
+          <!-- Authority signals -->
+          <div class="about-values">
+            <div class="av-item">
+              <div class="av-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
+              </div>
+              <div>
+                <strong>Honest & Transparent</strong>
+                <p>We report every finding — good or bad. You'll always know the real state of your security.</p>
+              </div>
+            </div>
+            <div class="av-item">
+              <div class="av-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+              </div>
+              <div>
+                <strong>Manual, In-Depth Testing</strong>
+                <p>Real testers, real techniques. We go beyond what scanners find to uncover what actually matters.</p>
+              </div>
+            </div>
+            <div class="av-item">
+              <div class="av-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+              </div>
+              <div>
+                <strong>Collaborative Approach</strong>
+                <p>We work with your development and IT teams — not in isolation — so fixes actually get implemented.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-visual-col">
+          <!-- Expertise areas visual -->
+          <div class="expertise-box">
+            <div class="eb-header">Our Expertise Areas</div>
+            <div class="eb-items">
+              <div class="eb-item">
+                <div class="eb-bar-wrap">
+                  <div class="eb-item-top">
+                    <span>Web Application Security</span>
+                    <span class="eb-tag">OWASP Top 10 + Beyond</span>
+                  </div>
+                  <div class="eb-bar"><div class="eb-fill" style="width:95%"></div></div>
+                </div>
+              </div>
+              <div class="eb-item">
+                <div class="eb-bar-wrap">
+                  <div class="eb-item-top">
+                    <span>API Security Testing</span>
+                    <span class="eb-tag">REST · GraphQL · gRPC</span>
+                  </div>
+                  <div class="eb-bar"><div class="eb-fill" style="width:90%"></div></div>
+                </div>
+              </div>
+              <div class="eb-item">
+                <div class="eb-bar-wrap">
+                  <div class="eb-item-top">
+                    <span>Android App Security</span>
+                    <span class="eb-tag">OWASP Mobile Top 10</span>
+                  </div>
+                  <div class="eb-bar"><div class="eb-fill" style="width:88%"></div></div>
+                </div>
+              </div>
+              <div class="eb-item">
+                <div class="eb-bar-wrap">
+                  <div class="eb-item-top">
+                    <span>Network Penetration Testing</span>
+                    <span class="eb-tag">Internal · External</span>
+                  </div>
+                  <div class="eb-bar"><div class="eb-fill" style="width:85%"></div></div>
+                </div>
+              </div>
+              <div class="eb-item">
+                <div class="eb-bar-wrap">
+                  <div class="eb-item-top">
+                    <span>Cloud Security (AWS/Azure/GCP)</span>
+                    <span class="eb-tag">IAM · Config Review</span>
+                  </div>
+                  <div class="eb-bar"><div class="eb-fill" style="width:82%"></div></div>
+                </div>
+              </div>
+            </div>
+            <div class="eb-footer">
+              <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd"/></svg>
+              All testing is manual-first with human expertise at every stage
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       SERVICES
+  ══════════════════════════════════════ -->
+  <section class="services section-pad alt-bg" id="services">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-eyebrow">What We Do</div>
+        <h2 class="section-h2">Security Services Designed Around <span class="highlight">Your Real Risk</span></h2>
+        <p class="section-sub">Each engagement is scoped specifically to your environment — not a template. We test the way attackers actually operate.</p>
+      </div>
+
+      <div class="services-grid">
+
+        <div class="svc-card">
+          <div class="svc-icon blue-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+          </div>
+          <h3>Web Application Penetration Testing</h3>
+          <p>Manual security testing of your web application — not just scanner output. We identify authentication bypasses, injection flaws, business logic vulnerabilities, access control issues, and more.</p>
+          <div class="svc-tags">
+            <span>OWASP Top 10</span><span>Business Logic</span><span>Auth Bypass</span><span>SQLi / XSS</span><span>IDOR / SSRF</span>
+          </div>
+          <a href="#contact" class="svc-link">Request this service →</a>
+        </div>
+
+        <div class="svc-card">
+          <div class="svc-icon green-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M18 8h1a4 4 0 010 8h-1"/><path d="M2 8h16v9a4 4 0 01-4 4H6a4 4 0 01-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+          </div>
+          <h3>API Security Testing</h3>
+          <p>APIs are the most common attack surface in modern applications. We test REST and GraphQL endpoints for broken authorization, excessive data exposure, injection flaws, and security misconfigurations.</p>
+          <div class="svc-tags">
+            <span>REST / GraphQL</span><span>BOLA / BFLA</span><span>Auth Bypass</span><span>Data Exposure</span>
+          </div>
+          <a href="#contact" class="svc-link">Request this service →</a>
+        </div>
+
+        <div class="svc-card">
+          <div class="svc-icon purple-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M12 18h.01"/></svg>
+          </div>
+          <h3>Android App Security Testing</h3>
+          <p>Mobile apps often store sensitive data and communicate with APIs that receive far less security attention than web interfaces. We test both static code and dynamic runtime behavior.</p>
+          <div class="svc-tags">
+            <span>Reverse Engineering</span><span>Insecure Storage</span><span>API Misuse</span><span>Code Analysis</span>
+          </div>
+          <a href="#contact" class="svc-link">Request this service →</a>
+        </div>
+
+        <div class="svc-card">
+          <div class="svc-icon orange-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="2" width="6" height="6" rx="1"/><rect x="16" y="2" width="6" height="6" rx="1"/><rect x="2" y="16" width="6" height="6" rx="1"/><rect x="16" y="16" width="6" height="6" rx="1"/><path d="M5 8v4M19 8v4M8 5h4M8 19h4M5 12h14"/></svg>
+          </div>
+          <h3>Network Penetration Testing</h3>
+          <p>From external perimeter testing to internal network assessments, we identify exposed services, weak configurations, lateral movement paths, and privilege escalation opportunities.</p>
+          <div class="svc-tags">
+            <span>External Perimeter</span><span>Internal Network</span><span>Lateral Movement</span><span>Misconfigs</span>
+          </div>
+          <a href="#contact" class="svc-link">Request this service →</a>
+        </div>
+
+        <div class="svc-card">
+          <div class="svc-icon cyan-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M17.5 19H9a7 7 0 110-14h8.5a4.5 4.5 0 010 9H9a2.5 2.5 0 010-5h8"/></svg>
+          </div>
+          <h3>Cloud Security Testing</h3>
+          <p>Cloud misconfigurations are one of the leading causes of breaches. We review your AWS, Azure, or GCP environment for over-privileged IAM roles, exposed storage, insecure network policies, and more.</p>
+          <div class="svc-tags">
+            <span>AWS · Azure · GCP</span><span>IAM Review</span><span>Config Audit</span><span>Storage Exposure</span>
+          </div>
+          <a href="#contact" class="svc-link">Request this service →</a>
+        </div>
+
+        <div class="svc-card">
+          <div class="svc-icon indigo-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
+          </div>
+          <h3>Security Assessment & Consulting</h3>
+          <p>Not sure where to start? We can assess your overall security posture, map your threat landscape, help you prioritize security investments, and guide your team in building secure development practices.</p>
+          <div class="svc-tags">
+            <span>Threat Modeling</span><span>Risk Assessment</span><span>Secure SDLC</span><span>Compliance Guidance</span>
+          </div>
+          <a href="#contact" class="svc-link">Request this service →</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       PROCESS
+  ══════════════════════════════════════ -->
+  <section class="process section-pad" id="process">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-eyebrow">How We Work</div>
+        <h2 class="section-h2">A Clear, Structured Process — <span class="highlight">No Surprises</span></h2>
+        <p class="section-sub">We believe security testing should be transparent. Here's exactly how every engagement runs, from first contact to final report.</p>
+      </div>
+
+      <div class="process-steps">
+
+        <div class="ps-item">
+          <div class="ps-num">01</div>
+          <div class="ps-content">
+            <h4>Free Scoping Consultation</h4>
+            <p>We start with a conversation — no obligation, no sales pitch. We listen to your environment, goals, and concerns, then recommend the right scope and approach for your situation.</p>
+          </div>
+        </div>
+
+        <div class="ps-item">
+          <div class="ps-num">02</div>
+          <div class="ps-content">
+            <h4>Engagement Agreement & NDA</h4>
+            <p>Everything is documented and legally protected before testing begins. You'll receive a clear scope of work and a mutual NDA so your data is always confidential.</p>
+          </div>
+        </div>
+
+        <div class="ps-item">
+          <div class="ps-num">03</div>
+          <div class="ps-content">
+            <h4>Reconnaissance & Attack Surface Mapping</h4>
+            <p>We map your entire attack surface — endpoints, technologies, exposed services, and entry points — using both passive and active intelligence gathering techniques.</p>
+          </div>
+        </div>
+
+        <div class="ps-item">
+          <div class="ps-num">04</div>
+          <div class="ps-content">
+            <h4>Manual Testing & Exploitation</h4>
+            <p>Our testers manually probe every target. We identify vulnerabilities, verify they're exploitable, and document the exact impact — including chained attacks that automated tools miss entirely.</p>
+          </div>
+        </div>
+
+        <div class="ps-item">
+          <div class="ps-num">05</div>
+          <div class="ps-content">
+            <h4>Detailed Report Delivery</h4>
+            <p>You receive a complete report with an executive summary, full technical findings, proof-of-concept for every vulnerability, risk ratings, and prioritized remediation steps your team can act on.</p>
+          </div>
+        </div>
+
+        <div class="ps-item">
+          <div class="ps-num">06</div>
+          <div class="ps-content">
+            <h4>Debrief & Remediation Support</h4>
+            <p>We walk through every finding with your team, answer questions, clarify fixes, and remain available during remediation. Once you've fixed things, we'll retest critical findings at no extra charge.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       WHY US — Psychology: Authority + Differentiation
+  ══════════════════════════════════════ -->
+  <section class="whyus section-pad alt-bg" id="whyus">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-eyebrow">Why Dwij Offensive Security</div>
+        <h2 class="section-h2">What Makes Us Different From <span class="highlight">Every Other Option</span></h2>
+      </div>
+
+      <div class="whyus-grid">
+
+        <div class="wu-card featured">
+          <div class="wu-badge">Most Important</div>
+          <div class="wu-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+          </div>
+          <h4>We Find What Others Miss</h4>
+          <p>We don't use automated scanners as our primary tool. Our testers manually explore every application the way a real attacker would — including business logic, chained vulnerabilities, and edge cases. This is why manual testing finds 3–4× more critical vulnerabilities than scanner-only approaches.</p>
+        </div>
+
+        <div class="wu-card">
+          <div class="wu-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+          </div>
+          <h4>Reports You Can Actually Use</h4>
+          <p>Our reports are written for two audiences: executives who need the business impact picture, and developers who need to understand and fix each vulnerability. No jargon walls. No vague recommendations.</p>
+        </div>
+
+        <div class="wu-card">
+          <div class="wu-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+          </div>
+          <h4>You Work With the Tester, Not a Project Manager</h4>
+          <p>With larger firms you often get a salesperson who hands you off to a junior tester you'll never speak to. With us, the person who tested your system is the same person who explains the findings and helps you fix them.</p>
+        </div>
+
+        <div class="wu-card">
+          <div class="wu-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
+          </div>
+          <h4>Full Transparency, Always</h4>
+          <p>You'll know exactly what we're testing, how we're testing it, and what we found. We don't hide findings that are inconvenient, and we don't pad reports with low-severity noise to look thorough.</p>
+        </div>
+
+        <div class="wu-card">
+          <div class="wu-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg>
+          </div>
+          <h4>Free Retest After Remediation</h4>
+          <p>Finding vulnerabilities is only half the job. After you've fixed the critical and high-severity issues, we retest them at no extra cost to confirm the fixes are effective and no new issues were introduced.</p>
+        </div>
+
+        <div class="wu-card">
+          <div class="wu-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
+          </div>
+          <h4>Strict Confidentiality</h4>
+          <p>Every engagement begins with a mutual NDA. Your systems, findings, and business information are never shared, never discussed, and handled with the same confidentiality you'd expect from a trusted partner.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       DELIVERABLES
+  ══════════════════════════════════════ -->
+  <section class="deliverables section-pad" id="deliverables">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-eyebrow">What You Receive</div>
+        <h2 class="section-h2">A Report That <span class="highlight">Drives Real Action</span></h2>
+        <p class="section-sub">Every engagement delivers a complete, professional report — built to satisfy both your technical team and your boardroom.</p>
+      </div>
+
+      <div class="deliverables-layout">
+
+        <!-- Report preview mockup -->
+        <div class="report-preview">
+          <div class="rp-topbar">
+            <div class="rp-brand">Dwij Offensive Security</div>
+            <div class="rp-badge">CONFIDENTIAL</div>
+          </div>
+          <div class="rp-title-block">
+            <div class="rp-title">Web Application Penetration Test Report</div>
+            <div class="rp-meta">Target: [Client Name] · Date: [Date] · Classification: Restricted</div>
+          </div>
+          <div class="rp-section-label">Executive Summary</div>
+          <div class="rp-text-lines">
+            <div class="rp-line long"></div>
+            <div class="rp-line medium"></div>
+            <div class="rp-line long"></div>
+            <div class="rp-line short"></div>
+          </div>
+          <div class="rp-section-label">Vulnerability Summary</div>
+          <div class="rp-vuln-summary">
+            <div class="rp-sev critical"><span>Critical</span><strong>2</strong></div>
+            <div class="rp-sev high"><span>High</span><strong>4</strong></div>
+            <div class="rp-sev medium"><span>Medium</span><strong>7</strong></div>
+            <div class="rp-sev low"><span>Low / Info</span><strong>11</strong></div>
+          </div>
+          <div class="rp-section-label">Finding #1 — SQL Injection</div>
+          <div class="rp-finding-meta">
+            <span class="rp-f-sev critical-label">CRITICAL</span>
+            <span class="rp-f-cvss">CVSS 9.8</span>
+            <span class="rp-f-loc">/api/login · parameter: username</span>
+          </div>
+          <div class="rp-text-lines">
+            <div class="rp-line long"></div>
+            <div class="rp-line medium"></div>
+          </div>
+        </div>
+
+        <!-- Deliverables list -->
+        <div class="del-list">
+          <div class="del-item">
+            <div class="del-num">01</div>
+            <div class="del-content">
+              <h4>Executive Summary</h4>
+              <p>A clear, concise summary of findings written for non-technical stakeholders — covers overall security posture, critical risks, and recommended priorities.</p>
+            </div>
+          </div>
+          <div class="del-item">
+            <div class="del-num">02</div>
+            <div class="del-content">
+              <h4>Detailed Technical Findings</h4>
+              <p>Every vulnerability documented with description, affected component, CVSS score, exploitation steps, and real-world business impact.</p>
+            </div>
+          </div>
+          <div class="del-item">
+            <div class="del-num">03</div>
+            <div class="del-content">
+              <h4>Proof of Concept Evidence</h4>
+              <p>Screenshots, HTTP requests/responses, and step-by-step PoC for each confirmed vulnerability — so your team can reproduce and understand the issue.</p>
+            </div>
+          </div>
+          <div class="del-item">
+            <div class="del-num">04</div>
+            <div class="del-content">
+              <h4>Risk-Prioritized Remediation Roadmap</h4>
+              <p>Every finding ranked by risk and provided with specific, actionable remediation guidance — including code-level recommendations where applicable.</p>
+            </div>
+          </div>
+          <div class="del-item">
+            <div class="del-num">05</div>
+            <div class="del-content">
+              <h4>Retest & Verification</h4>
+              <p>After you remediate critical and high-severity findings, we retest them to confirm fixes are effective and no new vulnerabilities were introduced.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       CONTACT — Psychological CTA
+  ══════════════════════════════════════ -->
+  <section class="contact section-pad alt-bg" id="contact">
+    <div class="container">
+      <div class="contact-layout">
+
+        <div class="contact-left">
+          <div class="section-eyebrow">Start the Conversation</div>
+          <h2 class="section-h2">Let's Talk About <span class="highlight">Your Security</span></h2>
+          <p class="body-text">The first step is a free, no-obligation consultation. No sales pressure — just an honest conversation about your environment, your concerns, and whether we're the right fit to help you.</p>
+
+          <div class="contact-promises">
+            <div class="cp-item">
+              <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd"/></svg>
+              <span>Response within 24 hours, guaranteed</span>
+            </div>
+            <div class="cp-item">
+              <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd"/></svg>
+              <span>Free scoping consultation — no commitment required</span>
+            </div>
+            <div class="cp-item">
+              <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd"/></svg>
+              <span>NDA signed before any information is shared</span>
+            </div>
+            <div class="cp-item">
+              <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd"/></svg>
+              <span>Your information is never shared with third parties</span>
+            </div>
+          </div>
+
+          <div class="contact-direct">
+            <div class="cd-row">
+              <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/></svg>
+              <a href="mailto:contact@dwijsec.com">contact@dwijsec.com</a>
+            </div>
+            <div class="cd-row">
+              <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16.338 15.338A8.5 8.5 0 112.5 10a8.5 8.5 0 0113.838 5.338z"/><path d="M13.5 10a3.5 3.5 0 11-7 0 3.5 3.5 0 017 0z"/></svg>
+              <a href="https://linkedin.com/company/dwijsec" target="_blank" rel="noopener noreferrer">linkedin.com/company/dwijsec</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-right">
+          <div class="form-card">
+            <div class="form-card-head">
+              <h3>Request a Free Consultation</h3>
+              <p>Tell us a little about your needs and we'll get back to you within 24 hours.</p>
+            </div>
+            <form id="contactForm" novalidate>
+              <div class="field-row">
+                <div class="field-group">
+                  <label for="fname">Name <span class="req">*</span></label>
+                  <input type="text" id="fname" name="name" placeholder="Your name" required />
+                </div>
+                <div class="field-group">
+                  <label for="femail">Email <span class="req">*</span></label>
+                  <input type="email" id="femail" name="email" placeholder="you@company.com" required />
+                </div>
+              </div>
+              <div class="field-group">
+                <label for="fcompany">Company</label>
+                <input type="text" id="fcompany" name="company" placeholder="Your company name" />
+              </div>
+              <div class="field-group">
+                <label for="fservice">What do you need?</label>
+                <select id="fservice" name="service">
+                  <option value="">Select a service...</option>
+                  <option>Web Application Penetration Testing</option>
+                  <option>API Security Testing</option>
+                  <option>Android App Security Testing</option>
+                  <option>Network Penetration Testing</option>
+                  <option>Cloud Security Testing</option>
+                  <option>Security Assessment & Consulting</option>
+                  <option>Not sure — help me figure out what I need</option>
+                </select>
+              </div>
+              <div class="field-group">
+                <label for="fmessage">Message <span class="req">*</span></label>
+                <textarea id="fmessage" name="message" rows="4" placeholder="Briefly describe your environment, timeline, or any specific concerns..." required></textarea>
+              </div>
+              <button type="submit" class="btn-submit" id="submitBtn">
+                Send Message
+                <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 10h12M10 4l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </button>
+              <p class="form-privacy">&#128274; Your information is kept strictly confidential.</p>
+              <div class="form-success" id="formSuccess">
+                <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd"/></svg>
+                <div>
+                  <strong>Message received!</strong>
+                  <p>We'll get back to you within 24 hours.</p>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       FOOTER
+  ══════════════════════════════════════ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand-col">
+          <a href="#home" class="logo">
+            <div class="logo-icon">
+              <svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M14 2L4 7v8c0 5.25 4.267 10.155 10 11.333C19.733 25.155 24 20.25 24 15V7L14 2Z" fill="#3b82f6" opacity="0.2"/>
+                <path d="M14 2L4 7v8c0 5.25 4.267 10.155 10 11.333C19.733 25.155 24 20.25 24 15V7L14 2Z" stroke="#3b82f6" stroke-width="1.8" stroke-linejoin="round"/>
+                <path d="M10 14l3 3 5-5" stroke="#3b82f6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <span class="logo-name" style="color:#f1f5f9">Dwij<span style="color:#3b82f6">Sec</span></span>
+          </a>
+          <p>Professional penetration testing and offensive security services. We help organizations find and fix security vulnerabilities before attackers exploit them.</p>
+          <div class="footer-socials">
+            <a href="https://linkedin.com/company/dwijsec" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            </a>
+            <a href="mailto:contact@dwijsec.com" aria-label="Email">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h5>Services</h5>
+          <ul>
+            <li><a href="#services">Web App Penetration Testing</a></li>
+            <li><a href="#services">API Security Testing</a></li>
+            <li><a href="#services">Android App Security</a></li>
+            <li><a href="#services">Network Penetration Testing</a></li>
+            <li><a href="#services">Cloud Security Testing</a></li>
+            <li><a href="#services">Security Consulting</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>Company</h5>
+          <ul>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#process">Our Process</a></li>
+            <li><a href="#whyus">Why Choose Us</a></li>
+            <li><a href="#deliverables">Deliverables</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>Contact</h5>
+          <ul>
+            <li><a href="mailto:contact@dwijsec.com">contact@dwijsec.com</a></li>
+            <li><a href="https://linkedin.com/company/dwijsec" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+            <li><a href="#contact">Free Consultation</a></li>
+          </ul>
+          <div class="footer-trust-note">
+            NDA · Confidential · Manual Testing
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>&copy; 2025 Dwij Offensive Security. All rights reserved.</span>
+        <span>Professional Penetration Testing &amp; Security Assessments</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
