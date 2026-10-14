@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dwij Offensive Security | Zero-Trust Phishing Defense</title>
+    <meta name="description" content="Enterprise zero-trust local phishing detection system. DPDP Act Compliant, Zero Data Leakage, 100% On-Premise Deployment.">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #020617; /* Slate 950 */
+            color: #f8fafc; /* Slate 50 */
+        }
+        .glass-panel {
+            background: rgba(30, 41, 59, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(51, 65, 85, 0.5);
+        }
+        .gradient-text {
+            background: linear-gradient(to right, #3b82f6, #06b6d4, #10b981);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .hero-bg {
+            background: radial-gradient(circle at top right, rgba(30, 58, 138, 0.15), transparent 50%),
+                        radial-gradient(circle at bottom left, rgba(16, 185, 129, 0.1), transparent 50%);
+        }
+        
+        /* Custom Toast Notification Animation */
+        #toast {
+            visibility: hidden;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.3s ease-in-out;
+        }
+        #toast.show {
+            visibility: visible;
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="antialiased overflow-x-hidden selection:bg-blue-500 selection:text-white flex flex-col min-h-screen">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 glass-panel border-b border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex items-center gap-2 cursor-pointer" onclick="window.scrollTo(0,0)">
+                    <!-- DwijOffSec Logo -->
+                    <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-blue-600 to-cyan-500 flex items-center justify-center shadow-lg shadow-blue-500/20">
+                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                        </svg>
+                    </div>
+                    <span class="text-xl font-bold tracking-tight ml-2">Dwij<span class="text-blue-500">OffSec</span></span>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="#kavach" class="text-sm font-medium text-slate-300 hover:text-white transition-colors">Project Kavach</a>
+                    <a href="#features" class="text-sm font-medium text-slate-300 hover:text-white transition-colors">Features</a>
+                    <a href="#why-us" class="text-sm font-medium text-slate-300 hover:text-white transition-colors">Why Us</a>
+                    <a href="#contact" class="px-6 py-2.5 rounded-md bg-blue-600 hover:bg-blue-500 text-white text-sm font-semibold transition-all shadow-lg shadow-blue-600/30">Request Demo</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-slate-300 hover:text-white focus:outline-none p-2">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu Panel -->
+        <div id="mobile-menu" class="hidden md:hidden glass-panel border-t border-slate-800 absolute w-full left-0">
+            <div class="px-4 pt-2 pb-6 space-y-2">
+                <a href="#kavach" class="block px-3 py-3 text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800 rounded-md">Project Kavach</a>
+                <a href="#features" class="block px-3 py-3 text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800 rounded-md">Features</a>
+                <a href="#why-us" class="block px-3 py-3 text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800 rounded-md">Why Us</a>
+                <a href="#contact" class="block px-3 py-3 mt-4 text-base font-medium bg-blue-600 text-white rounded-md text-center">Request Demo</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden hero-bg flex-grow">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+            <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-sm font-medium mb-8">
+                <span class="w-2 h-2 rounded-full bg-blue-500 animate-pulse"></span>
+                Introducing Project Kavach
+            </div>
+            <h1 class="text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight mb-6">
+                Enterprise <span class="gradient-text">Zero-Trust</span><br/>
+                Phishing Defense.
+            </h1>
+            <p class="mt-4 max-w-3xl mx-auto text-lg md:text-xl text-slate-400 font-light mb-10 leading-relaxed">
+                Intercept sophisticated zero-day phishing and credential harvesting attacks natively within your network. Complete data sovereignty with zero external API dependencies.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#contact" class="px-8 py-4 rounded-lg bg-blue-600 hover:bg-blue-500 text-white font-semibold transition-all shadow-[0_0_20px_rgba(37,99,235,0.4)]">
+                    Deploy Kavach Today
+                </a>
+                <a href="#features" class="px-8 py-4 rounded-lg glass-panel hover:bg-slate-800 text-white font-semibold transition-all">
+                    Explore Architecture
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Features Section -->
+    <section id="features" class="py-24 bg-slate-900 border-y border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-blue-500 font-semibold tracking-wide uppercase text-sm mb-2">Capabilities</h2>
+                <h3 class="text-3xl md:text-4xl font-bold mb-4">Next-Generation Threat Mitigation</h3>
+                <p class="text-slate-400 text-lg">Project Kavach secures your organization across every vector without compromising latency or privacy.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Feature 1 -->
+                <div class="glass-panel p-8 rounded-2xl border-t-4 border-t-blue-500 hover:-translate-y-1 transition-transform">
+                    <div class="w-12 h-12 rounded-lg bg-blue-500/10 flex items-center justify-center mb-6">
+                        <svg class="w-6 h-6 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                        </svg>
+                    </div>
+                    <h4 class="text-xl font-bold mb-3">AI Threat Detection</h4>
+                    <p class="text-slate-400 leading-relaxed">
+                        Advanced on-premise semantic analysis models evaluate psychological intent, urgency, and coercion in real-time, catching threats that bypass traditional filters.
+                    </p>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="glass-panel p-8 rounded-2xl border-t-4 border-t-cyan-500 hover:-translate-y-1 transition-transform">
+                    <div class="w-12 h-12 rounded-lg bg-cyan-500/10 flex items-center justify-center mb-6">
+                        <svg class="w-6 h-6 text-cyan-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                        </svg>
+                    </div>
+                    <h4 class="text-xl font-bold mb-3">Enterprise SOC Dashboard</h4>
+                    <p class="text-slate-400 leading-relaxed">
+                        A centralized command center for your security team. Safely detonate payloads, review incident metrics, and deploy global network blocks with a single click.
+                    </p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="glass-panel p-8 rounded-2xl border-t-4 border-t-emerald-500 hover:-translate-y-1 transition-transform">
+                    <div class="w-12 h-12 rounded-lg bg-emerald-500/10 flex items-center justify-center mb-6">
+                        <svg class="w-6 h-6 text-emerald-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01"></path>
+                        </svg>
+                    </div>
+                    <h4 class="text-xl font-bold mb-3">100% On-Premise</h4>
+                    <p class="text-slate-400 leading-relaxed">
+                        Designed for air-gapped capability. Project Kavach deploys directly into your VPC or local hardware, operating independently of the external internet.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section (Compliance) -->
+    <section id="why-us" class="py-24 relative overflow-hidden bg-slate-950">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6">Sovereignty Guaranteed. <br/><span class="text-emerald-400">Zero Data Leakage.</span></h2>
+                    <p class="text-slate-300 text-lg mb-6 leading-relaxed">
+                        Sending highly classified corporate communications to third-party cloud scanners is a critical security flaw. Dwij Offensive Security eliminates this risk entirely.
+                    </p>
+                    <p class="text-slate-300 text-lg mb-8 leading-relaxed">
+                        By processing all heuristic and semantic checks locally, we ensure your organization remains strictly compliant with modern data protection regulations while maintaining blazing-fast network speeds.
+                    </p>
+                    <ul class="space-y-5">
+                        <li class="flex items-start gap-4">
+                            <div class="mt-1 bg-emerald-500/20 p-1 rounded">
+                                <svg class="w-5 h-5 text-emerald-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            </div>
+                            <div>
+                                <h5 class="text-white font-semibold">DPDP Act 2023 Compliant</h5>
+                                <p class="text-slate-400 text-sm mt-1">Meets all requirements for the Digital Personal Data Protection Act by keeping personal data within your borders.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-4">
+                            <div class="mt-1 bg-emerald-500/20 p-1 rounded">
+                                <svg class="w-5 h-5 text-emerald-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            </div>
+                            <div>
+                                <h5 class="text-white font-semibold">Built for Critical Infrastructure</h5>
+                                <p class="text-slate-400 text-sm mt-1">The trusted architecture for Government PSUs, Financial Institutions, and Defense contractors.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Code/Terminal Visual -->
+                <div class="relative rounded-2xl overflow-hidden border border-slate-700 bg-slate-900 shadow-2xl">
+                    <div class="bg-slate-800 px-4 py-3 flex items-center gap-2 border-b border-slate-700">
+                        <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                        <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+                        <div class="w-3 h-3 rounded-full bg-green-500"></div>
+                        <span class="ml-4 text-xs font-mono text-slate-400">kavach-node-01 ~ local-defense</span>
+                    </div>
+                    <div class="p-6 font-mono text-sm space-y-4">
+                        <div class="text-slate-400">root@dwijoffsec:~# systemctl status kavach-core</div>
+                        <div class="text-emerald-400">● kavach-core.service - Local Zero-Trust Engine</div>
+                        <div class="text-slate-300">   Loaded: loaded (/etc/systemd/system/kavach.service)</div>
+                        <div class="text-slate-300">   Active: <span class="text-emerald-400">active (running)</span> since Today</div>
+                        <br/>
+                        <div class="text-slate-400">> Inbound traffic intercepted.</div>
+                        <div class="text-slate-400">> Analyzing payload locally...</div>
+                        <div class="text-red-400 font-bold">[!] THREAT DETECTED: Spear-Phishing Intent.</div>
+                        <div class="text-slate-300">> Executing automated SOC containment...</div>
+                        <div class="text-blue-400 mt-2">✓ Status: Contained. EXTERNAL DATA TRANSFER: 0 BYTES.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Footer -->
+    <footer id="contact" class="bg-[#01040f] border-t border-slate-800 pt-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-16 mb-16">
+                <!-- Brand Info -->
+                <div>
+                    <div class="flex items-center gap-2 mb-6">
+                        <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-blue-600 to-cyan-500 flex items-center justify-center">
+                            <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                            </svg>
+                        </div>
+                        <span class="text-2xl font-bold tracking-tight">Dwij<span class="text-blue-500">OffSec</span></span>
+                    </div>
+                    <p class="text-slate-400 mb-8 max-w-md">
+                        Securing enterprise infrastructure with next-generation offensive and defensive security architectures. Designed for complete sovereignty.
+                    </p>
+                    <div class="space-y-4 text-slate-300">
+                        <div class="flex items-center gap-3">
+                            <svg class="w-5 h-5 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                            <a href="mailto:info@dwijoffsec.com" class="hover:text-blue-400 transition-colors">contact@dwijoffsec.com</a>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <svg class="w-5 h-5 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                            <span>India HQ</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="glass-panel p-8 rounded-2xl">
+                    <h3 class="text-2xl font-bold mb-6 text-white">Request a Demo</h3>
+                    <form id="demo-form" class="space-y-4">
+                        <div>
+                            <label class="block text-sm font-medium text-slate-400 mb-1">Full Name</label>
+                            <input type="text" class="w-full px-4 py-3 bg-slate-900 border border-slate-700 rounded-lg focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 text-white transition-all" required>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-slate-400 mb-1">Corporate Email</label>
+                            <input type="email" class="w-full px-4 py-3 bg-slate-900 border border-slate-700 rounded-lg focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 text-white transition-all" required>
+                        </div>
+                        <button type="submit" class="w-full mt-2 px-6 py-3 bg-blue-600 hover:bg-blue-500 text-white rounded-lg font-semibold transition-all shadow-[0_0_15px_rgba(37,99,235,0.3)]">
+                            Submit Request
+                        </button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="border-t border-slate-800 py-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-slate-500 text-sm">
+                    &copy; <span id="year"></span> Dwij Offensive Security. All rights reserved.
+                </p>
+                <div class="flex space-x-6 text-sm">
+                    <a href="#" class="text-slate-500 hover:text-white transition-colors">Privacy Policy</a>
+                    <a href="#" class="text-slate-500 hover:text-white transition-colors">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Custom Toast Notification -->
+    <div id="toast" class="fixed bottom-5 right-5 z-50 glass-panel border-emerald-500/50 bg-slate-900/90 text-white px-6 py-4 rounded-xl shadow-2xl flex items-center gap-3">
+        <svg class="w-6 h-6 text-emerald-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+        <div>
+            <h4 class="font-bold text-sm">Request Received</h4>
+            <p class="text-xs text-slate-300">Our security team will contact you shortly.</p>
+        </div>
+    </div>
+
+    <!-- Interactive Scripts -->
+    <script>
+        // Dynamic Year for Footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Mobile Menu Toggle logic
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        const mobileLinks = menu.querySelectorAll('a');
+        
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu on link click
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.add('hidden');
+            });
+        });
+
+        // Form Submission & Toast Logic (Replacing alert)
+        const form = document.getElementById('demo-form');
+        const toast = document.getElementById('toast');
+
+        form.addEventListener('submit', (e) => {
+            e.preventDefault(); // Prevent page reload
+            
+            // Show toast
+            toast.classList.add('show');
+            
+            // Clear form
+            form.reset();
+            
+            // Hide toast after 4 seconds
+            setTimeout(() => {
+                toast.classList.remove('show');
+            }, 4000);
+        });
+    </script>
+</body>
+</html>
